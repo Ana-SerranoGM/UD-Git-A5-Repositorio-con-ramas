@@ -4,37 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Magarín">
     <title>Git. Trabajando con ramas</title>
 </head>
 
 <body>
-    <h1>git clone</h1>
+    <h1>Trabajando con ramas</h1>
+    <p>Realiza cada uno de los siguientes apartados. Trabajarás con un repositorio y sus ramas </p>
+
+    <h2>git clone</h2>
     <p>Descárgate el repositorio en una carpeta local.</p>
 
-    <h1>git branch</h1>
+    <h2>git branch</h2>
     <p>Este repositorio tiene varias ramas cada una con distintos commits. Lístalas e indica qué significa el asterisco </p>
+    <p style="color: purple">El asterisco denota la rama actual en la que se está trabajando en local (a donde apunta el puntero HEAD).</p>
+    <img src="capturas/branches.png"/>
 
-    <h1>git checkout</h1>
+    <h2>git checkout</h2>
     <p> Cambia de rama y fíjate en el sistema de archivos (working tree) cómo aparecen y desaparecen
         los ficheros. Siguen estando ahí, pero en cada rama (piensa en las ramas como mundos paralelos) 
         los contenidos son distintos.
     </p>
+    <p style="color: purple">Efectivamente al cambiarte de rama, los archivos cambian como se pueden comprobar.</p>
+    <img src="capturas/checkout.png"/>
 
-    <h1>git add/git commit</h1>
+    <h2>git add/git commit</h2>
     <p>En cada rama debes hacer una modificación: añadir pantallazos e introducirlos en el este fichero index </p>
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-add-commit</strong></p>
+    <img src="capturas/001-rama-git-add-commit.png"/>
 
-    <h1>git rm</h1>
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-branch</strong></p>
+    <img src="capturas/002-rama-git-branch.png"/>
+
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-branch-no-merged</strong></p>
+    <img src="capturas/003-rama-git-branch-no-merged.png"/>
+
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-clone</strong></p>
+    <img src="capturas/004-rama-git-clone.png"/>
+
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-log</strong></p>
+    <img src="capturas/005-rama-git-log.png"/>
+
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-merge</strong></p>
+    <img src="capturas/006-rama-git-merge.png"/>
+
+    <p style="color: purple">Modificaciones en rama: <strong>rama-git-rm</strong></p>
+    <img src="capturas/007-rama-git-rm.png"/>
+
+    <h2>git rm</h2>
     <p>En una de las ramas hay muchos ficheros temporales que debes borrar. Asegúrate de que sólo borras los imprescidibles</p>
+    <p style="color: purple">Se borran solo los archivos cuyo nombre comienza por "borrame".</p>
+    <img src="capturas/rm.png"/>
 
-    <h1>git merge</h1>
+    <h2>git merge</h2>
     <p>Tras realizar los distintos commits debes fusionar cada rama a la rama principal. </p>
 
-    <h1>git log --oneline --decorate --graph --all</h1>
+    <h2>git log --oneline --decorate --graph --all</h2>
     <p>Muestra el estado de los commits de forma gráfica</p>
 
-    <h1>git checkout -b </h1>
+    <h2>git checkout -b </h2>
     <p>Crea una rama nueva y añade  contenido relacionado con git</p>
+
+    <h2>git branch --no-merged</h2>
+    <p>Muestra las ramas que todavía no se han mergeado con respecto a la rama actual</p>
+
+    <h2>git push origin main</h2>
+    <p>Una vez fusionadas/mergeadas todas las ramas sube el repositorio local en el remoto</p>
 </body>
 
 </html>
